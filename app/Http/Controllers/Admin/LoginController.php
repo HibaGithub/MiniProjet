@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    
     /**
      * Where to redirect admins after login.
      *
@@ -36,6 +35,7 @@ class LoginController extends Controller
     {
         return view('admin.auth.login');
     }
+
     /**
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
@@ -55,6 +55,7 @@ class LoginController extends Controller
         }
         return back()->withInput($request->only('email', 'remember'));
     }
+
     /**
      * @param Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View

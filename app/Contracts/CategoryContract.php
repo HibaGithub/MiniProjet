@@ -8,6 +8,7 @@ namespace App\Contracts;
  */
 interface CategoryContract
 {
+   
     /**
      * @param string $order
      * @param string $sort

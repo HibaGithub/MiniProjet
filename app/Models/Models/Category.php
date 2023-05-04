@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use App\Models\Product;
 use TypiCMS\NestableTrait;
+use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 

@@ -28,6 +28,7 @@ class CategoryRepository extends BaseRepository implements CategoryContract
         parent::__construct($model);
         $this->model = $model;
     }
+   
 
     /**
      * @param string $order
@@ -140,9 +141,8 @@ class CategoryRepository extends BaseRepository implements CategoryContract
     public function treeList()
     {
         return Category::orderByRaw('-name ASC')
-            ->get()
+        ->get()
             ->nest()
-            ->setIndent('|–– ')
             ->listsFlattened('name');
     }
 
